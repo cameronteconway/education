@@ -15,7 +15,6 @@ const News = ({ data }) => {
                 <div className='dated-content-tile-container'>{renderNews}</div>
                 <a href='/#' className='see-more'>
                     See more news
-                    {/* <i class='bi bi-arrow-right'></i> */}
                 </a>
             </div>
         </section>

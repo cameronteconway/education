@@ -4,7 +4,6 @@
     column-gap: 30px;
     row-gap: 20px;
 }
-
 .three-info-block .column {
     padding: 20px 20px 60px 20px;
     border: 2px solid var(--dark-blue);
@@ -32,9 +31,6 @@
     font-weight: bold;
     margin-bottom: 10px;
 }
-.three-info-block .column p {
-    /* text-align: justify; */
-}
 .three-info-block .column i {
     font-size: 34px;
     position: absolute;
@@ -53,10 +49,3 @@
         padding: 20px 20px 60px 20px;
     }
 }
-
-/* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) {
-    .three-info-block{
-        grid-template-columns: repeat(4, 1fr);
-    }
-} */

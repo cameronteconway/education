@@ -33,6 +33,7 @@ export const toggleNavbarMobile = e => {
 
 export const hoverDropdown = () => {
     const dropdowns = document.querySelectorAll('.topLevelMenuItem');
+    // When dropdown nav item is hovered, close all dropdowns if they have the class 'show'
     for (let i = 0; i < dropdowns.length; i++) {
         if (dropdowns[i].nextElementSibling) {
             if (dropdowns[i].nextElementSibling.classList.contains('show')) {
@@ -40,15 +41,11 @@ export const hoverDropdown = () => {
             }
         }
     }
-
-    // if (e.target.nextElementSibling) {
-    //     const dropdown = e.target.nextElementSibling;
-    //     dropdown.classList.add('show');
-    // }
 };
 
 export const hoverOutDropdown = () => {
     const dropdowns = document.querySelectorAll('.topLevelMenuItem');
+    // When dropdown nav item is hovered out, close all dropdowns if they have the class 'show'
     for (let i = 0; i < dropdowns.length; i++) {
         if (dropdowns[i].nextElementSibling) {
             if (dropdowns[i].nextElementSibling.classList.contains('show')) {
@@ -60,6 +57,7 @@ export const hoverOutDropdown = () => {
 
 export const focusDropdown = e => {
     const dropdowns = document.querySelectorAll('.topLevelMenuItem');
+    // When dropdown nav item is focused, close all dropdowns if they have the class 'show'
     for (let i = 0; i < dropdowns.length; i++) {
         if (dropdowns[i].nextElementSibling) {
             if (dropdowns[i].nextElementSibling.classList.contains('show')) {
@@ -68,6 +66,7 @@ export const focusDropdown = e => {
         }
     }
 
+    // If e.target has a drodpown/mega-menu add class 'show'
     if (e.target.nextElementSibling) {
         const dropdown = e.target.nextElementSibling;
         dropdown.classList.add('show');

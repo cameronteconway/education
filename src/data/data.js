@@ -209,13 +209,11 @@ export const researchData = [
     {
         title: 'What to study',
         img: '',
-        // text: 'We offer a range of high-quality courses, which include full-time, part-time, online and distance learning. Find your path and make a difference.',
         text: 'We offer a range of high-quality courses, which include full-time, part-time, online and distance learning.',
     },
     {
         title: 'Discover',
         img: '',
-        // text: 'Our historic institution has been the destination of choice for thousands of students. We offer engaging research opportunities, a welcoming community, excellent sport facilities, and much more.',
         text: 'Our historic institution offers engaging research opportunities, a welcoming community, excellent sport facilities, and much more.',
     },
     {

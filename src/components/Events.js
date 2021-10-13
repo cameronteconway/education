@@ -9,7 +9,6 @@ const Events = ({ data }) => {
     });
 
     return (
-        // style={{ backgroundColor: '#F6F6F6' }}
         <section>
             <div className='wrapper'>
                 <h2>Events</h2>
@@ -18,7 +17,6 @@ const Events = ({ data }) => {
                 </div>
                 <a href='/#' className='see-more'>
                     See more events
-                    {/* <i class='bi bi-arrow-right'></i> */}
                 </a>
             </div>
         </section>

@@ -1,12 +1,9 @@
 :root {
     --dark-blue: #003049;
-    --red: #d62828;
-    --orange: #f77f00;
-    --yellow: #fcbf49;
-    --sand: #eae2b7;
-    --grey: #f9f9f9;
     --light-blue: #0a547d;
-    --light-grey: #ddd;
+    --red: #d62828;
+    --grey: #f9f9f9;
+    --dark-grey: #ddd;
 }
 body {
     font-family: 'Merriweather', serif;
@@ -44,10 +41,8 @@ h2 {
 }
 
 .wrapper {
-    /* max-width: 1250px; */
     max-width: 1500px;
     margin: auto;
-    /* border: 1px solid red; */
     padding: 0 2rem;
     overflow: auto;
 }

@@ -7,7 +7,6 @@ const SocialMedia = () => {
         <section>
             <div className='wrapper'>
                 <div className='social-media'>
-                    {/* <h2>Connect with us...</h2> */}
                     <h2>Explore #CTEC on Social Media</h2>
                     <ul>
                         <li>

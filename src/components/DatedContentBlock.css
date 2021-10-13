@@ -8,7 +8,6 @@ h2 {
     row-gap: 30px;
 }
 .dated-content-tile-container .dated-content-tile {
-    /* border: 1px solid var(--dark-blue); */
     position: relative;
 }
 
@@ -48,7 +47,6 @@ h2 {
     object-position: center;
     object-fit: cover;
     transition: transform 0.5s ease;
-    /* display: block; */
     position: absolute;
 }
 .dated-content-tile-container .dated-content-tile .date {

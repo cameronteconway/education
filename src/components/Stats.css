@@ -6,9 +6,6 @@
 }
 .stats-container .stat {
     position: relative;
-    /* border: 1px solid red; */
-    /* border: 2px solid var(--dark-blue);
-    border-bottom: 6px solid var(--dark-blue); */
     text-align: center;
     padding: 1.5rem 0;
 }
