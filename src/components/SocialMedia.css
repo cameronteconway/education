@@ -1,0 +1,51 @@
+.social-media {
+    text-align: center;
+}
+.social-media h2 {
+    font-size: 24px;
+}
+.social-media ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    max-width: 280px;
+    margin: 0 auto;
+}
+.social-media ul li i {
+    font-size: 26px;
+    color: var(--red);
+}
+.social-media ul li:hover i,
+.social-media ul a:focus i {
+    color: var(--dark-blue);
+}
+.social-media ul a:focus {
+    outline: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .social-media h2 {
+        font-size: 26px;
+    }
+    .social-media ul {
+        max-width: 350px;
+    }
+    .social-media ul li i {
+        font-size: 28px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .social-media h2 {
+        font-size: 28px;
+    }
+    .social-media ul li i {
+        font-size: 30px;
+    }
+}
