@@ -10,9 +10,9 @@ const ThreeInfoBlock = ({ data }) => {
 
     return (
         <section>
-            <div class='wrapper'>
+            <div className='wrapper'>
                 <h2>Studying with us</h2>
-                <div class='three-info-block'>{renderInfoColumn}</div>
+                <div className='three-info-block'>{renderInfoColumn}</div>
             </div>
         </section>
     );

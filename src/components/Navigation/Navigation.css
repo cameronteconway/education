@@ -228,7 +228,7 @@
     background-color: transparent;
     border: none;
     font-size: 16px;
-    top: 7px;
+    top: 5px;
     right: 4px;
     outline: none;
     color: var(--dark-blue);
@@ -367,5 +367,8 @@
     }
     .secondary-nav .mobile-nav {
         display: none;
+    }
+    .secondary-nav .search-form button {
+        top: 6px;
     }
 }

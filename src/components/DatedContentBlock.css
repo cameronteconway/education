@@ -17,6 +17,7 @@ h2 {
 .dated-content-tile-container .dated-content-tile a:hover,
 .dated-content-tile-container .dated-content-tile a:focus {
     text-decoration: underline;
+    text-decoration-color: var(--dark-blue);
 }
 .dated-content-tile-container .dated-content-tile a:focus {
     outline: none;

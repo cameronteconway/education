@@ -33,8 +33,6 @@ const Navigation = () => {
             }
         }
 
-        console.log(e.target);
-
         // Hide mobile nav if click off it
         const mobileNav = document.querySelector('.mobile-nav');
         const navbarToggle = document.querySelector('#navbar-toggle');
