@@ -35,6 +35,14 @@ footer .copyright {
     color: white;
     font-weight: 300;
 }
+footer .copyright a {
+    color: white;
+    text-decoration: none;
+}
+footer .copyright a:hover,
+footer .copyright a:focus {
+    text-decoration: underline;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {

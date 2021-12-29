@@ -22,7 +22,16 @@ const Footer = ({ data }) => {
                         );
                     })}
                 </div>
-                <div className='copyright'>© Cameron Conway 2021</div>
+                <div className='copyright'>
+                    ©{' '}
+                    <a
+                        href='https://cameronconway.co.uk'
+                        title="Go to Cameron Conway's portfolio website"
+                    >
+                        Cameron Conway
+                    </a>{' '}
+                    2021
+                </div>
             </div>
         </footer>
     );

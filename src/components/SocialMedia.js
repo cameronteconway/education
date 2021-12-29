@@ -1,11 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './SocialMedia.css';
 
+const useOnScreen = options => {
+    // https://www.youtube.com/watch?v=QD4GcZJObXg&ab_channel=LeighHalliday
+    const [ref, setRef] = useState(null);
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            setVisible(entry.isIntersecting);
+        }, options);
+
+        if (ref) observer.observe(ref);
+
+        return () => {
+            if (ref) observer.unobserve(ref);
+        };
+    }, [ref, options]);
+
+    return [setRef, visible];
+};
+
 const SocialMedia = () => {
+    const [setRef, visible] = useOnScreen({ threshold: 1 });
+
     return (
-        <section>
-            <div className='wrapper'>
+        <section ref={setRef}>
+            <div
+                className={`wrapper animatedFadeInUp ${
+                    visible ? 'animated fadeInUp' : ''
+                }`}
+            >
                 <div className='social-media'>
                     <h2>Explore #CTEC on Social Media</h2>
                     <ul>

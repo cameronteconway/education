@@ -24,19 +24,29 @@ h2 {
     font-size: 24px;
 }
 
+section {
+    padding: 2rem 0;
+}
+section:first-of-type {
+    padding-top: 4rem;
+}
+section:last-of-type {
+    padding-bottom: 4rem;
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     h2 {
         font-size: 30px;
     }
     section {
-        padding: 2.5rem 0;
+        padding: 3.5rem 0;
     }
     section:first-of-type {
-        padding-top: 5rem;
+        padding-top: 7rem;
     }
     section:last-of-type {
-        padding-bottom: 5rem;
+        padding-bottom: 7rem;
     }
 }
 
@@ -45,16 +55,6 @@ h2 {
     margin: auto;
     padding: 0 2rem;
     overflow: auto;
-}
-
-section {
-    padding: 1.5rem 0;
-}
-section:first-of-type {
-    padding-top: 3rem;
-}
-section:last-of-type {
-    padding-bottom: 3rem;
 }
 
 /* See more link */
@@ -88,4 +88,41 @@ section:last-of-type {
 .see-more:hover,
 .see-more:focus {
     outline: none;
+}
+
+/* On scroll animations */
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 60px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 60px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+}
+.animatedFadeInUp {
+    opacity: 0;
+}
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
 }
