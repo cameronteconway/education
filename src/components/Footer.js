@@ -30,7 +30,7 @@ const Footer = ({ data }) => {
                     >
                         Cameron Conway
                     </a>{' '}
-                    2021
+                    2022
                 </div>
             </div>
         </footer>
