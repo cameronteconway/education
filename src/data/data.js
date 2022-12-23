@@ -13,7 +13,7 @@ const months = [
     'December',
 ];
 
-const addDays = days => {
+const addDays = (days) => {
     const date = new Date();
     date.setDate(date.getDate() + days);
     const day = date.getDate();
@@ -26,7 +26,7 @@ export const eventData = [
         name: 'Working from home - here to stay?',
         day: addDays(6).day,
         month: addDays(6).month,
-        img: '/images/events/work-from-home.jpg',
+        img: '/assets/events/work-from-home.jpg',
         imgAlt: 'Man with a face mask on working at home on his laptop.',
         location: 'Online (Zoom)',
     },
@@ -34,7 +34,7 @@ export const eventData = [
         name: 'Architecture and climate change',
         day: addDays(15).day,
         month: addDays(15).month,
-        img: '/images/events/architecture.jpg',
+        img: '/assets/events/architecture.jpg',
         imgAlt: 'Large modern house in Belgium.',
         location: 'Lecture Theater 2',
     },
@@ -42,7 +42,7 @@ export const eventData = [
         name: 'Art in the city',
         day: addDays(24).day,
         month: addDays(24).month,
-        img: '/images/events/city-art.jpg',
+        img: '/assets/events/city-art.jpg',
         imgAlt: 'Grafitti on the wall of an old town house.',
         location: 'Lecture Theater 6',
     },
@@ -50,7 +50,7 @@ export const eventData = [
         name: 'Structuring an argument',
         day: addDays(38).day,
         month: addDays(38).month,
-        img: '/images/events/notes.jpg',
+        img: '/assets/events/notes.jpg',
         imgAlt: 'Notepad graphic over a solid background.',
         location: 'Main Library',
     },
@@ -61,7 +61,7 @@ export const newsData = [
         name: 'Government to fund research into renewable energy',
         day: addDays(-5).day,
         month: addDays(-5).month,
-        img: '/images/news/renewable-energy.jpg',
+        img: '/assets/news/renewable-energy.jpg',
         imgAlt: 'A single wind turbine in a field with cloudy skies above.',
         category: 'Science',
     },
@@ -69,7 +69,7 @@ export const newsData = [
         name: 'Department of Medicine expansion',
         day: addDays(-9).day,
         month: addDays(-9).month,
-        img: '/images/news/medicine.jpg',
+        img: '/assets/news/medicine.jpg',
         imgAlt: 'Two doctors performing surgery on a patient.',
         category: 'Medicine',
     },
@@ -77,7 +77,7 @@ export const newsData = [
         name: 'Students selected to represent their country',
         day: addDays(-12).day,
         month: addDays(-12).month,
-        img: '/images/news/sport.jpg',
+        img: '/assets/news/sport.jpg',
         imgAlt: 'Women running on a track in a stadium.',
         category: 'Sport',
     },
@@ -85,7 +85,7 @@ export const newsData = [
         name: 'Hundreds of threes to be planted across campus',
         day: addDays(-15).day,
         month: addDays(-15).month,
-        img: '/images/news/tree.jpg',
+        img: '/assets/news/tree.jpg',
         imgAlt: 'Single tree infront of a river.',
         category: 'Campus Life',
     },

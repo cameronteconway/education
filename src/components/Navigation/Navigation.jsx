@@ -2,7 +2,7 @@ import React from 'react';
 import Primary from './Primary';
 import Secondary from './Secondary';
 
-import './Navigation.css';
+import '../../styles/Navigation.css';
 import {
     toggleNavbarMobile,
     hoverDropdown,
@@ -11,7 +11,7 @@ import {
 } from '../../util/util';
 
 const Navigation = () => {
-    document.addEventListener('click', e => {
+    document.addEventListener('click', (e) => {
         // Hide primary nav if click off it
         if (
             !e.target.classList.contains('topLevelMenuItem') ||
@@ -64,7 +64,7 @@ const Navigation = () => {
     });
 
     // When tabbing off the primary menu items, remove any open dropdown
-    document.addEventListener('keyup', e => {
+    document.addEventListener('keyup', (e) => {
         const dropdowns = document.querySelectorAll('.topLevelMenuItem');
         const allMenuItems = [];
         for (let i = 0; i < dropdowns.length; i++) {

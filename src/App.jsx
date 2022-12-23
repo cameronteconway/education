@@ -1,12 +1,12 @@
-import React from 'react';
-import Navigation from './Navigation/Navigation';
-import Banner from './Banner';
-import SocialMedia from './SocialMedia';
-import Events from './Events';
-import News from './News';
-import Stats from './Stats';
-import Footer from './Footer';
-import ThreeInfoBlock from './ThreeInfoBlock';
+import { createRoot } from 'react-dom/client';
+import Navigation from './components/Navigation/Navigation';
+import Banner from './components/Banner';
+import SocialMedia from './components/SocialMedia';
+import Events from './components/Events';
+import News from './components/News';
+import Stats from './components/Stats';
+import Footer from './components/Footer';
+import ThreeInfoBlock from './components/ThreeInfoBlock';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import {
@@ -15,9 +15,9 @@ import {
     eventData,
     newsData,
     footerData,
-} from '../data/data';
+} from './data/data';
 
-import './App.css';
+import './styles/App.css';
 
 const App = () => {
     return (
@@ -36,4 +36,4 @@ const App = () => {
     );
 };
 
-export default App;
+createRoot(document.getElementById('root')).render(<App />);

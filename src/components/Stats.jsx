@@ -1,7 +1,7 @@
 import React from 'react';
 import Stat from './Stat';
 
-import './Stats.css';
+import '../styles/Stats.css';
 
 const Stats = ({ data }) => {
     const renderStats = data.map((stats, index) => {

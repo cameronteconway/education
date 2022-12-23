@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoColumn from './InfoColumn';
 
-import './ThreeInfoBlock.css';
+import '../styles/ThreeInfoBlock.css';
 
 const ThreeInfoBlock = ({ data }) => {
     const renderInfoColumn = data.map((content, index) => {

@@ -1,12 +1,16 @@
 import React from 'react';
 
-import './Banner.css';
+import '../styles/Banner.css';
 
 const Banner = () => {
     return (
         <div className='banner'>
-            <img
-                src='/images/banners/uni-building.jpg'
+            {/* <img
+                src='/assets/banners/uni-building.jpg'
+                alt='Campus building in summer surrounded by trees'
+            /> */}
+            <span
+                id='banner-image'
                 alt='Campus building in summer surrounded by trees'
             />
             <div className='info-box'>

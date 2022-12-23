@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DatedContentTile = ({ content }) => {
+const DatedContentTile = ({ content, image }) => {
     return (
         <div className='dated-content-tile'>
             <a href='/#'>
                 <div className='img-container'>
-                    <img src={content.img} alt={content.imgAlt} />
+                    <img src={image} alt={content.imgAlt} />
                 </div>
                 <span className='date'>
                     {content.day} <br /> {content.month}

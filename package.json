@@ -1,39 +1,45 @@
 {
-  "name": "education",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "bootstrap-icons": "^1.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "education",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "default": "index.html",
+    "dependencies": {
+        "bootstrap-icons": "^1.5.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^2.1.0",
+        "eslint": "^8.29.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^2.8.0",
+        "process": "^0.11.10",
+        "vite": "^3.1.4"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "format": "prettier --write \"src/**/*.{js,jsx}\"",
+        "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

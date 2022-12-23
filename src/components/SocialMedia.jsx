@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import './SocialMedia.css';
+import '../styles/SocialMedia.css';
 
-const useOnScreen = options => {
+const useOnScreen = (options) => {
     // https://www.youtube.com/watch?v=QD4GcZJObXg&ab_channel=LeighHalliday
     const [ref, setRef] = useState(null);
     const [visible, setVisible] = useState(false);
