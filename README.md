@@ -4,4 +4,4 @@ The aim of this project has been to create a clean, user friendly and accessible
 
 ## Technologies
 
-The project is built using the frontend JavaScript library [React](https://reactjs.org/) the rest is standard CSS and vanilla JavaScript.
+The project is built using the frontend JavaScript library [React](https://reactjs.org/) along with TypeScript, styling is dealt with using SCSS following the BEM methodology.

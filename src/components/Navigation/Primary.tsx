@@ -1,60 +1,69 @@
-import React from 'react';
+interface Props {
+    functionality: [
+        () => void,
+        () => void,
+        (e: React.FocusEvent<HTMLAnchorElement>) => void
+    ];
+}
 
-const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
+const Primary = ({ functionality }: Props) => {
+    const [hoverDropdown, hoverOutDropdown, focusDropdown] = functionality;
     return (
         <div className='primary-nav'>
             <div className='wrapper'>
-                <a href='#test' className='logo'>
-                    <h1>CTEC</h1>
+                <a href='#test' className='primary-nav__logo'>
+                    <h1 className='primary-nav__title'>CTEC</h1>
                 </a>
-                <nav id='primary-nav'>
-                    <ul className='nav-content'>
-                        <li>
+                <nav id='primary-nav' className='primary-nav__navigation'>
+                    <ul className='primary-nav__items'>
+                        <li className='primary-nav__item'>
                             <a
                                 href='#test'
-                                onFocus={e => focusDropdown(e)}
+                                onFocus={(
+                                    e: React.FocusEvent<HTMLAnchorElement>
+                                ) => focusDropdown(e)}
                                 onMouseOver={() => hoverDropdown()}
                                 onMouseOut={() => hoverOutDropdown()}
-                                className='topLevelMenuItem'
+                                className='topLevelMenuItem primary-nav__link'
                             >
                                 About
                             </a>
                             <ul className='dropdown'>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         History
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Facts &#38; figures
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Vision &#38; values
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Maps &#38; directions
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Campuses
@@ -62,50 +71,52 @@ const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li className='primary-nav__item'>
                             <a
                                 href='#test'
-                                onFocus={e => focusDropdown(e)}
+                                onFocus={(
+                                    e: React.FocusEvent<HTMLAnchorElement>
+                                ) => focusDropdown(e)}
                                 onMouseOver={() => hoverDropdown()}
                                 onMouseOut={() => hoverOutDropdown()}
-                                className='topLevelMenuItem'
+                                className='topLevelMenuItem primary-nav__link'
                             >
                                 Research
                             </a>
                             <div className='mega-menu'>
-                                <div className='content'>
-                                    <div className='row'>
-                                        <ul className='mega-links'>
-                                            <li className='mega-link-col-title'>
+                                <div className='mega-menu__content'>
+                                    <div className='mega-menu__row'>
+                                        <ul className='mega-menu__items'>
+                                            <li className='mega-menu__col-title'>
                                                 Our Research
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Research impact
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Public engagement
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Case studies
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Digital research
@@ -113,38 +124,38 @@ const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className='row'>
-                                        <ul className='mega-links'>
-                                            <li className='mega-link-col-title'>
+                                    <div className='mega-menu__row'>
+                                        <ul className='mega-menu__items'>
+                                            <li className='mega-menu__col-title'>
                                                 Explore
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Libraries
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Projects
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Support for researchers
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Contact research
@@ -152,38 +163,38 @@ const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className='row'>
-                                        <ul className='mega-links'>
-                                            <li className='mega-link-col-title'>
+                                    <div className='mega-menu__row'>
+                                        <ul className='mega-menu__items'>
+                                            <li className='mega-menu__col-title'>
                                                 Browse By
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Research by school
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Research by faculty
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Research by academic
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li className='mega-menu__item'>
                                                 <a
-                                                    className='dropdownLevelMenuItem'
+                                                    className='dropdownLevelMenuItem mega-menu__link'
                                                     href='/#'
                                                 >
                                                     Research news
@@ -194,44 +205,46 @@ const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li className='primary-nav__item'>
                             <a
                                 href='#test'
-                                onFocus={e => focusDropdown(e)}
+                                onFocus={(
+                                    e: React.FocusEvent<HTMLAnchorElement>
+                                ) => focusDropdown(e)}
                                 onMouseOver={() => hoverDropdown()}
                                 onMouseOut={() => hoverOutDropdown()}
-                                className='topLevelMenuItem'
+                                className='topLevelMenuItem primary-nav__link'
                             >
                                 Admissions
                             </a>
                             <ul className='dropdown'>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Undergraduate
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Graduate
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Continuing education
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Summer studies
@@ -239,44 +252,46 @@ const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li className='primary-nav__item'>
                             <a
                                 href='#test'
-                                onFocus={e => focusDropdown(e)}
+                                onFocus={(
+                                    e: React.FocusEvent<HTMLAnchorElement>
+                                ) => focusDropdown(e)}
                                 onMouseOver={() => hoverDropdown()}
                                 onMouseOut={() => hoverOutDropdown()}
-                                className='topLevelMenuItem'
+                                className='topLevelMenuItem primary-nav__link'
                             >
                                 News &#38; Events
                             </a>
                             <ul className='dropdown'>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         News
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Events
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Key dates
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Social media
@@ -284,52 +299,54 @@ const Primary = ({ hoverDropdown, hoverOutDropdown, focusDropdown }) => {
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li className='primary-nav__item'>
                             <a
                                 href='#test'
-                                onFocus={e => focusDropdown(e)}
+                                onFocus={(
+                                    e: React.FocusEvent<HTMLAnchorElement>
+                                ) => focusDropdown(e)}
                                 onMouseOver={() => hoverDropdown()}
                                 onMouseOut={() => hoverOutDropdown()}
-                                className='topLevelMenuItem'
+                                className='topLevelMenuItem primary-nav__link'
                             >
                                 Campus
                             </a>
                             <ul className='dropdown'>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Visit us
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Accommodation
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Student Union
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Campus life
                                     </a>
                                 </li>
-                                <li>
+                                <li className='dropdown__item'>
                                     <a
-                                        className='dropdownLevelMenuItem'
+                                        className='dropdownLevelMenuItem dropdown__link'
                                         href='/#'
                                     >
                                         Virtual tour

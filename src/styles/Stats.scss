@@ -4,20 +4,21 @@
     column-gap: 0px;
     row-gap: 0px;
 }
-.stats-container .stat {
+
+.stat {
     position: relative;
     text-align: center;
     padding: 1.5rem 0;
-}
-.stats-container .stat span {
-    display: block;
-    font-size: 24px;
-    color: var(--red);
-    margin-bottom: 10px;
-    font-weight: 800;
-}
-.stats-container .stat p {
-    color: var(--dark-blue);
+    &__title {
+        display: block;
+        font-size: 24px;
+        color: var(--red);
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+    &__text {
+        color: var(--dark-blue);
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -27,7 +28,7 @@
         column-gap: 30px;
         row-gap: 30px;
     }
-    .stats-container .stat {
+    .stat {
         padding: 3rem 0;
     }
 }
@@ -37,10 +38,10 @@
     .stats-container {
         grid-template-columns: repeat(4, 1fr);
     }
-    .stats-container .stat {
+    .stat {
         padding: 2rem 0;
-    }
-    .stats-container .stat span {
-        font-size: 30px;
+        &__title {
+            font-size: 30px;
+        }
     }
 }

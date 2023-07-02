@@ -1,4 +1,3 @@
-import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation/Navigation';
 import Banner from './components/Banner';
 import SocialMedia from './components/SocialMedia';
@@ -17,7 +16,7 @@ import {
     footerData,
 } from './data/data';
 
-import './styles/App.css';
+import './styles/App.scss';
 
 const App = () => {
     return (
@@ -36,4 +35,4 @@ const App = () => {
     );
 };
 
-createRoot(document.getElementById('root')).render(<App />);
+export default App;

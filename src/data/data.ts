@@ -1,4 +1,4 @@
-const months = [
+const months: string[] = [
     'January',
     'February',
     'March',
@@ -13,7 +13,7 @@ const months = [
     'December',
 ];
 
-const addDays = (days) => {
+const addDays = (days: number): { day: number; month: string } => {
     const date = new Date();
     date.setDate(date.getDate() + days);
     const day = date.getDate();
@@ -21,7 +21,17 @@ const addDays = (days) => {
     return { day, month };
 };
 
-export const eventData = [
+// Events
+interface Event {
+    name: string;
+    day: number;
+    month: string;
+    img: string;
+    imgAlt: string;
+    location: string;
+}
+
+export const eventData: Event[] = [
     {
         name: 'Working from home - here to stay?',
         day: addDays(6).day,
@@ -56,7 +66,16 @@ export const eventData = [
     },
 ];
 
-export const newsData = [
+// News
+interface News {
+    name: string;
+    day: number;
+    month: string;
+    img: string;
+    imgAlt: string;
+    category: string;
+}
+export const newsData: News[] = [
     {
         name: 'Government to fund research into renewable energy',
         day: addDays(-5).day,
@@ -91,7 +110,13 @@ export const newsData = [
     },
 ];
 
-export const statsData = [
+// Stats
+interface Stat {
+    stat: string;
+    text: string;
+}
+
+export const statsData: Stat[] = [
     {
         stat: '94%',
         text: 'student satisfaction',
@@ -110,7 +135,18 @@ export const statsData = [
     },
 ];
 
-export const footerData = [
+// Footer
+interface Link {
+    text: string;
+    title: string;
+}
+
+interface FooterColumn {
+    colTitle: string;
+    links: Link[];
+}
+
+export const footerData: FooterColumn[] = [
     {
         colTitle: 'Information about',
         links: [
@@ -205,20 +241,23 @@ export const footerData = [
     },
 ];
 
-export const researchData = [
+// Research
+interface ResearchData {
+    title: string;
+    text: string;
+}
+
+export const researchData: ResearchData[] = [
     {
         title: 'What to study',
-        img: '',
         text: 'We offer a range of high-quality courses, which include full-time, part-time, online and distance learning.',
     },
     {
         title: 'Discover',
-        img: '',
         text: 'Our historic institution offers engaging research opportunities, a welcoming community, excellent sport facilities, and much more.',
     },
     {
         title: 'Apply now',
-        img: '',
         text: 'Persue your passion and become part of our world renown instituation - apply now and take the first steps on your new journey.',
     },
 ];
