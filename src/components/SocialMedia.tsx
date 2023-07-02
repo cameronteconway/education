@@ -2,7 +2,7 @@ import { useState, useEffect, SetStateAction } from 'react';
 
 import '../styles/SocialMedia.scss';
 
-const useOnScreen = (options: Object) => {
+const useOnScreen = (options: object) => {
     // https://www.youtube.com/watch?v=QD4GcZJObXg&ab_channel=LeighHalliday
     const [ref, setRef] = useState<HTMLDivElement | null>(null);
     const [visible, setVisible] = useState(false);
