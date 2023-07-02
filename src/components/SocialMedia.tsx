@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SetStateAction } from 'react';
 
 import '../styles/SocialMedia.scss';
 
-const useOnScreen = (options) => {
+const useOnScreen = (options: Object) => {
     // https://www.youtube.com/watch?v=QD4GcZJObXg&ab_channel=LeighHalliday
-    const [ref, setRef] = useState(null);
+    const [ref, setRef] = useState<HTMLDivElement | null>(null);
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -31,7 +31,13 @@ const SocialMedia = () => {
 
     return (
         <section>
-            <div ref={setRef}>
+            <div
+                ref={
+                    setRef as React.Dispatch<
+                        SetStateAction<HTMLDivElement | null>
+                    >
+                }
+            >
                 <div
                     className={`wrapper animatedFadeInUp ${
                         visible ? 'animated fadeInUp' : ''
