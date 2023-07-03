@@ -117,9 +117,16 @@
         }
     }
     &__link {
-        padding: 20px 15px;
+        padding: 15px 15px;
         font-size: 18px;
         font-weight: 300;
+        display: block;
+        color: var(--dark-blue);
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -173,9 +180,13 @@
         display: block;
         color: var(--dark-blue);
         text-decoration: none;
-        padding: 20px 15px;
+        padding: 15px 15px;
         font-size: 18px;
         font-weight: 300;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 
