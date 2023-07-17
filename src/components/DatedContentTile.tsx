@@ -1,3 +1,5 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 interface Content {
     name: string;
     day: number;
@@ -19,10 +21,11 @@ const DatedContentTile = ({ data }: Props) => {
         <div className='dated-content-tile'>
             <a className='dated-content-tile__link' href='/#'>
                 <div className='dated-content-tile__img-container'>
-                    <img
+                    <LazyLoadImage
                         className='dated-content-tile__image'
                         src={image}
                         alt={content.imgAlt}
+                        loading='lazy'
                     />
                 </div>
                 <span className='dated-content-tile__date'>
